@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Invisible : MonoBehaviour {
 
-    private MeshRenderer invisible;
+    private MeshRenderer[] invisible;
     private TrailRenderer trail;
     public float Timeleft = 5;
 
     void Start () {
-        invisible = GetComponent<MeshRenderer>();
-        trail = GetComponent<TrailRenderer>();
+        invisible = GetComponentsInChildren<MeshRenderer>();
+            trail = GetComponent<TrailRenderer>();
 
         ResetTrail();
 	}
@@ -30,13 +30,19 @@ public class Invisible : MonoBehaviour {
 
     void ResetTrail()
     {
-        invisible.enabled = true;
+        for(int i = 0; i < invisible.Length; i++)
+        {
+            invisible[i].enabled = true;
+        }
         trail.enabled = false;
     }
 
     void Activate()
     {
-        invisible.enabled = false;
+        for (int i = 0; i < invisible.Length; i++)
+        {
+            invisible[i].enabled = false;
+        }
         trail.enabled = true;
         Timeleft = 5;
     }
