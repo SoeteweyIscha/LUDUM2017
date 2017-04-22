@@ -18,7 +18,7 @@ public class Char_ctrl : NetworkBehaviour {
        controller  = this.GetComponent<Rigidbody>();
         if(isLocalPlayer)
         {
-            Camera.main.transform.position = this.transform.position - this.transform.forward * 10 + this.transform.up * 3;
+            Camera.main.transform.position = this.transform.position - this.transform.right * 3 + this.transform.up * 3;
             Camera.main.transform.LookAt(this.transform.position);
             Camera.main.transform.parent = this.transform;
         }
