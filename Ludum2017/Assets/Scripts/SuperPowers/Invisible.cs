@@ -7,12 +7,13 @@ public class Invisible : NetworkBehaviour {
 
     private MeshRenderer[] invisible;
     private TrailRenderer trail;
-    public float Timeleft = 5;
+    //public float Timeleft = 5;
 
-    void Start () {
+    public override void OnStartClient ()
+    {
         invisible = GetComponentsInChildren<MeshRenderer>();
-            trail = GetComponent<TrailRenderer>();
-
+        trail = GetComponent<TrailRenderer>();
+        trail.enabled = false;
         CmdResetTrail();
 	}
 	
@@ -26,16 +27,36 @@ public class Invisible : NetworkBehaviour {
 
         if (Input.GetKeyDown(KeyCode.I))
         {
+            Debug.Log("Request Invisible");
             CmdActivate();
         }
 
-        if (Timeleft > 0) Timeleft -= Time.deltaTime;
-        else CmdResetTrail();
+       // if (Timeleft > 0) Timeleft -= Time.deltaTime;
+        //else CmdResetTrail();
 
 	}
 
     [Command]
-    void CmdResetTrail()
+    private void CmdActivate()
+    {
+        RpcActivate();
+        StartCoroutine(Reactivate());
+    }
+
+    private IEnumerator Reactivate()
+    {
+        yield return new WaitForSeconds(5);
+        RpcResetTrail();
+    }
+
+    [Command]
+    private void CmdResetTrail()
+    {
+        RpcResetTrail();
+    }
+
+    [ClientRpc]
+    void RpcResetTrail()
     {
         for(int i = 0; i < invisible.Length; i++)
         {
@@ -44,15 +65,16 @@ public class Invisible : NetworkBehaviour {
         trail.enabled = false;
     }
 
-    [Command]
-    void CmdActivate()
+    [ClientRpc]
+    void RpcActivate()
     {
+        Debug.Log("Going Invisible");
         for (int i = 0; i < invisible.Length; i++)
         {
             invisible[i].enabled = false;
         }
         trail.enabled = true;
-        Timeleft = 5;
+        //Timeleft = 5;
     }
 
 }

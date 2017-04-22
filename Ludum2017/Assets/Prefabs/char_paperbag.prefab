@@ -417,8 +417,44 @@ TrailRenderer:
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.97927463
-        value: 0
+        time: 0.14396363
+        value: 0.49547172
+        inSlope: -0.8687377
+        outSlope: -0.8687377
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.30837813
+        value: 0.974709
+        inSlope: -1.2749434
+        outSlope: -1.2749434
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.44398153
+        value: 0.49595046
+        inSlope: -1.5255809
+        outSlope: -1.5255809
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.602086
+        value: 0.9961833
+        inSlope: -1.5096366
+        outSlope: -1.5096366
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.75545114
+        value: 0.49313766
+        inSlope: -1.0508299
+        outSlope: -1.0508299
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.89776105
+        value: 1
+        inSlope: -0.70899725
+        outSlope: -0.70899725
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0.6305733
         inSlope: 0
         outSlope: 0
         tangentMode: 0
