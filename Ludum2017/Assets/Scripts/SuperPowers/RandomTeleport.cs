@@ -22,7 +22,7 @@ public class RandomTeleport : MonoBehaviour {
 
         
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             ValidLocation();
         }
