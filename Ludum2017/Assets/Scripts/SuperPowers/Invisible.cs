@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine;
 
-public class Invisible : MonoBehaviour {
+public class Invisible : NetworkBehaviour {
 
     private MeshRenderer[] invisible;
     private TrailRenderer trail;
@@ -12,23 +13,29 @@ public class Invisible : MonoBehaviour {
         invisible = GetComponentsInChildren<MeshRenderer>();
             trail = GetComponent<TrailRenderer>();
 
-        ResetTrail();
+        CmdResetTrail();
 	}
 	
 	
 	void Update () {
 
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Activate();
+            CmdActivate();
         }
 
         if (Timeleft > 0) Timeleft -= Time.deltaTime;
-        else ResetTrail();
+        else CmdResetTrail();
 
 	}
 
-    void ResetTrail()
+    [Command]
+    void CmdResetTrail()
     {
         for(int i = 0; i < invisible.Length; i++)
         {
@@ -37,7 +44,8 @@ public class Invisible : MonoBehaviour {
         trail.enabled = false;
     }
 
-    void Activate()
+    [Command]
+    void CmdActivate()
     {
         for (int i = 0; i < invisible.Length; i++)
         {
