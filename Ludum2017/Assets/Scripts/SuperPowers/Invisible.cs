@@ -12,7 +12,7 @@ public class Invisible : MonoBehaviour {
         invisible = GetComponent<MeshRenderer>();
         trail = GetComponent<TrailRenderer>();
 
-        Reset();
+        ResetTrail();
 	}
 	
 	
@@ -24,11 +24,11 @@ public class Invisible : MonoBehaviour {
         }
 
         if (Timeleft > 0) Timeleft -= Time.deltaTime;
-        else Reset();
+        else ResetTrail();
 
 	}
 
-    void Reset()
+    void ResetTrail()
     {
         invisible.enabled = true;
         trail.enabled = false;
