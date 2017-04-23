@@ -9,48 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1122533661381650}
+  m_RootGameObject: {fileID: 1154463174789850}
   m_IsPrefabParent: 1
---- !u!1 &1122533661381650
+--- !u!1 &1154463174789850
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4392958446894424}
-  - component: {fileID: 33776629968323594}
-  - component: {fileID: 23997959225063018}
-  - component: {fileID: 54323712508363434}
-  - component: {fileID: 114921801828612998}
-  - component: {fileID: 136738492971773000}
-  - component: {fileID: 114071382847863056}
+  - component: {fileID: 4561062509223750}
+  - component: {fileID: 33632779664545798}
+  - component: {fileID: 23556951648217892}
+  - component: {fileID: 54133822200301914}
+  - component: {fileID: 114385884245418420}
+  - component: {fileID: 136389732952495900}
   m_Layer: 0
-  m_Name: Rock
-  m_TagString: Tree
+  m_Name: Rock_2_small
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4392958446894424
+--- !u!4 &4561062509223750
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.70710665}
-  m_LocalPosition: {x: -7.3724732, y: 31, z: -5.786351}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.5541115, y: 21.670347, z: 21.832937}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23997959225063018
+--- !u!23 &23556951648217892
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -76,19 +75,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33776629968323594
+--- !u!33 &33632779664545798
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   m_Mesh: {fileID: 4300000, guid: 50c0ac72cc3847b4592724863a9776b4, type: 3}
---- !u!54 &54323712508363434
+--- !u!54 &54133822200301914
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -98,34 +97,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114071382847863056
+--- !u!114 &114385884245418420
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28fc492fad2241e4597165fcaa69adf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114921801828612998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b19238fd328403643aa0d7e86a5d289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136738492971773000
+--- !u!136 &136389732952495900
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1122533661381650}
+  m_GameObject: {fileID: 1154463174789850}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
