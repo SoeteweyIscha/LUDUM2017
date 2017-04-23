@@ -139,9 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minScale: 0.033
-  _expandtionRatio: 4
-  _shrinkRatio: 1
-  _expandtionTime: 2
+  maxScaled: 0.3
   speed: 2
   _shrinkPeriod: 5
   bang: 1
