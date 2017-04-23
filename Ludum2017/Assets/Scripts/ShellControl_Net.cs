@@ -20,8 +20,9 @@ public class ShellControl_Net : NetworkBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        _explosion = GetComponentInChildren<ParticleSystem>();
+        _explosion = GetComponentInChildren<ParticleSystem>();        
         _shellRenderer = GetComponent<MeshRenderer>();
+        _explosion.transform.localPosition = Vector3.zero;
 	}
 	
 	// Shells are update by the server
@@ -48,7 +49,7 @@ public class ShellControl_Net : NetworkBehaviour
         //particle effect
 
         _shellRenderer.enabled = false;
-        _explosion.Play (true);
+        _explosion.Play();
 
         if (!isServer)
             return;
