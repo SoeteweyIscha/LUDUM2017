@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114975070379940122}
   - component: {fileID: 114953762551994098}
   - component: {fileID: 82974710605697540}
+  - component: {fileID: 114305777920546086}
   m_Layer: 0
   m_Name: char_paperbag
   m_TagString: Player
@@ -228,14 +229,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085242291301184}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0.1, y: 0.705, z: 0}
   m_LocalScale: {x: 0.2, y: 0.25, z: 0.2}
   m_Children:
   - {fileID: 4189338840650888}
   m_Father: {fileID: 4475249125119464}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!4 &4866405292641732
 Transform:
   m_ObjectHideFlags: 1
@@ -457,7 +458,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142822062540108}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -717,9 +718,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 6
   JumpSpeed: 8
-  Gravity: 20
   controller: {fileID: 54110415014980776}
   _characterCamera: {fileID: 20144644775295970}
+  planet: {fileID: 114517944657100220, guid: f67964936468d0147a2f77ab72a1c540, type: 2}
+  walkingSound: {fileID: 0}
+  walkingSoundVol: 0
+  jumpSound: {fileID: 8300000, guid: 9a38ecd5eb7f34a40ab092b95db67144, type: 3}
+  jumpSoundVol: 0.7
+--- !u!114 &114305777920546086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142822062540108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9717b3cddfbca418d8abaa50d359fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114351635880542810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -731,8 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19238fd328403643aa0d7e86a5d289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSound: {fileID: 8300000, guid: 9a38ecd5eb7f34a40ab092b95db67144, type: 3}
-  jumpSoundVol: 0.8
 --- !u!114 &114476050779319986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -810,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828027a8a4293541b47daa3fc30bd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 800
+  power: 700
   _bulletPrefab: {fileID: 1317781042627120, guid: 9490776a430478f41b0c4b60d859e896,
     type: 2}
   _gunBarrel: {fileID: 4529456686174238}

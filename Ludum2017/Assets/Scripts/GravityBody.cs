@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using UnityEngine.Networking;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class GravityBody : MonoBehaviour
 {
     //audio
-    public AudioClip jumpSound;
-    public float jumpSoundVol;
-    private AudioSource _soundSource;
+    
 
     GravityAttractor planet;
 
@@ -25,13 +24,7 @@ public class GravityBody : MonoBehaviour
         _rigidbody.useGravity = false;
         if(this.tag != "Rock")
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
-        //if (this.tag == "Tree")
-        //{
-        // _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-        //}
-
-        _soundSource = GetComponent<AudioSource>();
+        
     }
 
 
@@ -48,15 +41,5 @@ public class GravityBody : MonoBehaviour
 
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
     
-        if (Input.GetButtonDown("Jump") && this.tag == "Player")
-        {
-
-            _rigidbody.AddForce(-planet.GetTheGravity() * 20);
-            //play jump sound
-            _soundSource.PlayOneShot(jumpSound, jumpSoundVol);
-        }
-    }
 }

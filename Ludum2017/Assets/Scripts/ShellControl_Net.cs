@@ -9,15 +9,20 @@ public class ShellControl_Net : NetworkBehaviour
     private float _shellLifetime = 2f;
     [SerializeField]
     private bool _canKill = false;
-
+    
     private bool _isLive = true;
     private float _age;
+
+    private ParticleSystem _explosion;
+    private MeshRenderer _shellRenderer;
 
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        _explosion = GetComponentInChildren<ParticleSystem>();        
+        _shellRenderer = GetComponent<MeshRenderer>();
+        //_explosion.transform.localPosition = Vector3.zero;
 	}
 	
 	// Shells are update by the server
@@ -30,7 +35,7 @@ public class ShellControl_Net : NetworkBehaviour
         {
             //Destroy them on the network
             NetworkServer.Destroy(gameObject);
-        }
+        }       
 	}
 
     private void OnCollisionEnter(Collision other)
@@ -40,6 +45,10 @@ public class ShellControl_Net : NetworkBehaviour
             return;
 
         _isLive = false;
+        //particle effect
+
+        _shellRenderer.enabled = false;
+        _explosion.Play();
 
         if (!isServer)
             return;
@@ -47,8 +56,9 @@ public class ShellControl_Net : NetworkBehaviour
         if (!_canKill || other.gameObject.tag != "Player")
             return;
 
-        //PaperBagHealth health = other.gameObject.getComponent<PaperBagHealth>();
-        //if (health != null)
-            //health.TakeDamage(1);
+        PaperBagHealth health = other.gameObject.GetComponent<PaperBagHealth>();
+        if (health != null)
+            health.TakeDamage(1);
+        
     }
 }
