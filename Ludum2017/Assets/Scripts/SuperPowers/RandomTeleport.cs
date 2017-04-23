@@ -10,13 +10,13 @@ public class RandomTeleport : MonoBehaviour {
     private Rigidbody _rb;
 
     //audio
-    /*public AudioClip teleportSound;
+    public AudioClip teleportSound;
     public float teleportSoundVol;
-    private AudioSource _soundSource;*/
+    private AudioSource _soundSource;
 
     private void Awake()
     {
-        //_soundSource = GetComponent<AudioSource>();
+        _soundSource = GetComponent<AudioSource>();
     }
 
     void Start () {
@@ -35,7 +35,7 @@ public class RandomTeleport : MonoBehaviour {
             ValidLocation();
 
             //play teleport sound
-            //_soundSource.PlayOneShot(teleportSound, teleportSoundVol);
+            _soundSource.PlayOneShot(teleportSound, teleportSoundVol);
         }
       }
 

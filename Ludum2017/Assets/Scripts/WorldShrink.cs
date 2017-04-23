@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
 
-public class WorldShrink : NetworkBehaviour
+public class WorldShrink : MonoBehaviour
 {
 
 
@@ -37,8 +37,6 @@ public class WorldShrink : NetworkBehaviour
     //[ServerCallback]
     void Update()
     {
-        if (!isServer)
-            return;
 
         time += Time.deltaTime;
 
