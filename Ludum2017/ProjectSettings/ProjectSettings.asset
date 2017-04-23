@@ -460,8 +460,9 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudServicesEnabled:
+    UNet: 1
+  cloudProjectId: 91788e7a-fc68-4d0e-8fc1-d834ec697a52
+  projectName: Ludum2017
+  organizationId: gillesvc
   cloudEnabled: 0
