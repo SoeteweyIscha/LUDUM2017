@@ -34,7 +34,7 @@ public class WorldShrink : NetworkBehaviour
 
     }
 
-    [ServerCallback]
+    //[ServerCallback]
     void Update()
     {
         if (!isServer)
