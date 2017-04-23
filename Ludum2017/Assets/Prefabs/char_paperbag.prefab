@@ -704,7 +704,7 @@ MonoBehaviour:
   JumpSpeed: 8
   Gravity: 20
   controller: {fileID: 54779812083432750}
-  _characterCamera: {fileID: 0}
+  _characterCamera: {fileID: 4996744863989728}
 --- !u!114 &114893942778694412
 MonoBehaviour:
   m_ObjectHideFlags: 1
