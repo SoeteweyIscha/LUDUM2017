@@ -16,6 +16,16 @@ public class Char_ctrl : NetworkBehaviour {
     //private Vector3 turnLeft = new Vector3(0, -90.0f, 0);
     //private Vector3 turnRight = new Vector3(0, 90.0f, 0);
 
+    //audio
+    public AudioClip walkingSound;
+    public float walkingSoundVol;
+    private AudioSource _soundSource;
+
+    private void Awake()
+    {
+        _soundSource = GetComponent<AudioSource>();
+    }
+
     //public override void OnStartLocalPlayer()
     public override void OnStartLocalPlayer()
     {
@@ -65,7 +75,10 @@ public class Char_ctrl : NetworkBehaviour {
         //Making the character move
         controller.MovePosition(controller.position + moveDirection * Time.deltaTime);
 
-
+        //play walking sound
+        _soundSource.loop = true;
+        _soundSource.clip = walkingSound;
+        _soundSource.Play();
 
     }
 
