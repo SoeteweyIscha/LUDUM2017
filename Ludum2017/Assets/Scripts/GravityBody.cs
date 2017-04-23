@@ -5,8 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class GravityBody : MonoBehaviour
 {
-
-
+    //audio
+    public AudioClip jumpSound;
+    public float jumpSoundVol;
+    private AudioSource _soundSource;
 
     GravityAttractor planet;
 
@@ -26,8 +28,10 @@ public class GravityBody : MonoBehaviour
 
         //if (this.tag == "Tree")
         //{
-           // _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        // _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
         //}
+
+        _soundSource = GetComponent<AudioSource>();
     }
 
 
@@ -51,6 +55,8 @@ public class GravityBody : MonoBehaviour
         {
 
             _rigidbody.AddForce(-planet.GetTheGravity() * 20);
+            //play jump sound
+            _soundSource.PlayOneShot(jumpSound, jumpSoundVol);
         }
     }
 }

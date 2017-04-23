@@ -9,6 +9,16 @@ public class Invisible : NetworkBehaviour {
     private TrailRenderer trail;
     //public float Timeleft = 5;
 
+    //audio
+    public AudioClip waveySound;
+    private AudioSource _soundSource;
+    public bool loop;
+
+    private void Awake()
+    {
+        _soundSource = GetComponent<AudioSource>();
+    }
+
     public override void OnStartClient ()
     {
         invisible = GetComponentsInChildren<MeshRenderer>();
@@ -29,6 +39,11 @@ public class Invisible : NetworkBehaviour {
         {
             Debug.Log("Request Invisible");
             CmdActivate();
+            _soundSource.loop = true;
+            _soundSource.clip = waveySound;
+            _soundSource.Play();
+            
+            
         }
 
        // if (Timeleft > 0) Timeleft -= Time.deltaTime;
@@ -63,6 +78,8 @@ public class Invisible : NetworkBehaviour {
             invisible[i].enabled = true;
         }
         trail.enabled = false;
+        //if (_soundSource.isPlaying) _soundSource.Stop();
+        _soundSource.loop = false;
     }
 
     [ClientRpc]
