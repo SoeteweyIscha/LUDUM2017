@@ -39,7 +39,7 @@ public class Health : NetworkBehaviour
         informationText = GameObject.FindObjectOfType<Text>();
 
         if (isLocalPlayer)
-            informationText.text = "Game Over";
+            //informationText.text = "Game Over";
     }
 
     void BackToLobby()
