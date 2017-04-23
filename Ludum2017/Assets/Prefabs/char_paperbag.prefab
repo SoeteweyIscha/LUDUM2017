@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSound: {fileID: 8300000, guid: 9a38ecd5eb7f34a40ab092b95db67144, type: 3}
-  jumpSoundVol: 1
+  jumpSoundVol: 0.8
 --- !u!114 &114476050779319986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -797,6 +797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   World: {fileID: 1620192950882496, guid: b9075725fea7f654bb974634bd3ecaf3, type: 2}
+  teleportSound: {fileID: 8300000, guid: 79051f7c9ce11ae45a38aeecd406694d, type: 3}
+  teleportSoundVol: 0.35
 --- !u!114 &114953762551994098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -812,6 +814,8 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 1317781042627120, guid: 9490776a430478f41b0c4b60d859e896,
     type: 2}
   _gunBarrel: {fileID: 4529456686174238}
+  shootSound: {fileID: 8300000, guid: 2dc733e3c0d0faf439a0fb03802c83ab, type: 3}
+  shootSoundVol: 0.35
 --- !u!114 &114975070379940122
 MonoBehaviour:
   m_ObjectHideFlags: 1

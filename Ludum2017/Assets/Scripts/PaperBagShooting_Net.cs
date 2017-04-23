@@ -15,12 +15,17 @@ public class PaperBagShooting_Net : NetworkBehaviour {
     [SerializeField]
     private Transform _gunBarrel;
 
-
+    //audio
+    public AudioClip shootSound;
+    public float shootSoundVol;
+    private AudioSource _soundSource;
 
     private void Awake()
     {
         //find the place where it shoots from
         _gunBarrel = transform.FindChild("GunBarrel");
+
+        _soundSource = GetComponent<AudioSource>();
     }
 
 	// Update is called once per frame
@@ -33,6 +38,8 @@ public class PaperBagShooting_Net : NetworkBehaviour {
         {
             Debug.Log("BulletFired");
             CmdSpawnBullet();
+            //play jump sound
+            _soundSource.PlayOneShot(shootSound, shootSoundVol);
         }
 	}
 

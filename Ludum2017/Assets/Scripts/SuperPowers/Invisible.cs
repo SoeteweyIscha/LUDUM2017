@@ -39,6 +39,8 @@ public class Invisible : NetworkBehaviour {
         {
             Debug.Log("Request Invisible");
             CmdActivate();
+
+            //play wavey sound
             _soundSource.loop = true;
             _soundSource.clip = waveySound;
             _soundSource.Play();
@@ -78,7 +80,7 @@ public class Invisible : NetworkBehaviour {
             invisible[i].enabled = true;
         }
         trail.enabled = false;
-        //if (_soundSource.isPlaying) _soundSource.Stop();
+        
         _soundSource.loop = false;
     }
 
