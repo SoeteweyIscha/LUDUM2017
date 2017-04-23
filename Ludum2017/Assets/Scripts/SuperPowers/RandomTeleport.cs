@@ -8,8 +8,16 @@ public class RandomTeleport : MonoBehaviour {
     private float SphereRadius;
     public GameObject World;
     private Rigidbody _rb;
-    
 
+    //audio
+    /*public AudioClip teleportSound;
+    public float teleportSoundVol;
+    private AudioSource _soundSource;*/
+
+    private void Awake()
+    {
+        //_soundSource = GetComponent<AudioSource>();
+    }
 
     void Start () {
         SphereRadius = World.GetComponent<SphereCollider>().radius * World.transform.localScale.x;
@@ -25,6 +33,9 @@ public class RandomTeleport : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.T))
         {
             ValidLocation();
+
+            //play teleport sound
+            //_soundSource.PlayOneShot(teleportSound, teleportSoundVol);
         }
       }
 

@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 7916141f7c3811f41b182f94e113e246
-timeCreated: 1492870062
+timeCreated: 1492963209
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - World: {fileID: 1620192950882496, guid: b9075725fea7f654bb974634bd3ecaf3, type: 2}
+  - teleportSound: {fileID: 8300000, guid: 52214d6fbf6b5eb4b815128737fe66bf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

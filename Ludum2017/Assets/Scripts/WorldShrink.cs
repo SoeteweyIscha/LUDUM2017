@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine;
 
-public class WorldShrink : MonoBehaviour
+public class WorldShrink : NetworkBehaviour
 {
 
 
-    public float startSize;
+    public float startSize = 1;
 
-    public float minScale;
+    public float minScale = 0.033f;
 
     private Vector3 _extra;
 
@@ -19,25 +20,25 @@ public class WorldShrink : MonoBehaviour
     public float speed = 2.0f;
 
     private float time = 0.0f;
-    public float interpolationPeriod;
-    public float bang;
-
+    public float interpolationPeriod = 5;
+    public float bang=1;
 
 
 
     void Start()
     {
-        _extra = new Vector3(0.033f, 0.033f, 0.033f);
+        _extra = new Vector3(minScale,minScale,minScale);
         _StartScale = new Vector3(startSize, startSize, startSize);
         this.transform.localScale = _StartScale;
         _targetScale = this.transform.localScale - minScale * _extra;
 
     }
 
-
+    //[ServerCallback]
     void Update()
     {
-
+        if (!isServer)
+            return;
 
         time += Time.deltaTime;
 
