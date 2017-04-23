@@ -24,10 +24,10 @@ public class GravityBody : MonoBehaviour
         if(this.tag != "Rock")
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 
-        if (this.tag == "Tree")
-        {
-            _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-        }
+        //if (this.tag == "Tree")
+        //{
+           // _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        //}
     }
 
 

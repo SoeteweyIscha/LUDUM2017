@@ -37,7 +37,7 @@ public class MakeTrees : MonoBehaviour {
 
 
 
-            _currentTree = Instantiate(Trees[Random.Range(0, 2)], newPos, Quaternion.Euler(0, 0, 0));
+            _currentTree = Instantiate(Trees[Random.Range(0,3)], newPos, Quaternion.Euler(0,0,0));
             _currentTree.transform.Rotate(-randomVec);
 
             _currentTree.transform.SetParent(this.transform);
