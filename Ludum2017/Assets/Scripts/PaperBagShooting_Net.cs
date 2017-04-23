@@ -7,18 +7,25 @@ public class PaperBagShooting_Net : NetworkBehaviour {
 
     // power of bullets
     [SerializeField]
-    float power = 800f;
+    private float power = 800f;
+    //bulletobject
     [SerializeField]
-    GameObject shellPrefab;
-    []
+    private GameObject _shellPrefab;
+    //place of shooting bullet
+    [SerializeField]
+    private Transform _gunBarrel;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
+
+    private void Reset()
+    {
+        //find the place where it shoots from
+        _gunBarrel = transform.
+    }
+
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 }
