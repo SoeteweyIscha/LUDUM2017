@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shellLifetime: 2
-  _canKill: 0
+  _canKill: 1
 --- !u!114 &114855510615393976
 MonoBehaviour:
   m_ObjectHideFlags: 1

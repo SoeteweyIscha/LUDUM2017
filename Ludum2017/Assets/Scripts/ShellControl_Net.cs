@@ -9,7 +9,7 @@ public class ShellControl_Net : NetworkBehaviour
     private float _shellLifetime = 2f;
     [SerializeField]
     private bool _canKill = false;
-
+    
     private bool _isLive = true;
     private float _age;
 
@@ -35,7 +35,7 @@ public class ShellControl_Net : NetworkBehaviour
         {
             //Destroy them on the network
             NetworkServer.Destroy(gameObject);
-        }
+        }       
 	}
 
     private void OnCollisionEnter(Collision other)
@@ -45,7 +45,6 @@ public class ShellControl_Net : NetworkBehaviour
             return;
 
         _isLive = false;
-
         //particle effect
 
         _shellRenderer.enabled = false;
@@ -60,5 +59,6 @@ public class ShellControl_Net : NetworkBehaviour
         PaperBagHealth health = other.gameObject.GetComponent<PaperBagHealth>();
         if (health != null)
             health.TakeDamage(1);
+        
     }
 }
