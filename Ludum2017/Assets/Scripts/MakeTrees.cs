@@ -1,53 +1,59 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if (UNITY_EDITOR) 
-using UnityEditor;
-#endif
 
-public class PlantBuilder : MonoBehaviour
-{
+public class MakeTrees : MonoBehaviour {
 
-    public int count;
-    public GameObject plantPiecePrefab;
+    public GameObject[] Trees = new GameObject[3];
+    private GameObject _currentTree;
 
-#if (UNITY_EDITOR)
+    private float SphereRadius;
+    public GameObject World;
 
-    [ContextMenu("Make Plant")]
-    void Make()
-    {
-        // Destroy all children
-        for (int i = transform.childCount - 1; i >= 0; i--)
+    public int numberOfTrees;
+    
+
+
+    void Start () {
+        SphereRadius = World.GetComponent<SphereCollider>().radius * World.transform.localScale.x;
+
+        for(int i = 0; i < numberOfTrees; i++)
         {
-            GameObject.DestroyImmediate(transform.GetChild(i));
-        }
-
-        // Now, make all children again
-        Vector3 lastPoint = transform.position;
-        Rigidbody2D lastRigidBody = GetComponent<Rigidbody2D>();
-        for (int i = 0; i < count; i++)
-        {
-            GameObject piece = (GameObject)PrefabUtility.InstantiatePrefab(plantPiecePrefab);// GameObject.Instantiate(plantPiecePrefab);
-            Transform origin = piece.transform.Find("Origin");
-            Transform endpoint = piece.transform.Find("EndPoint");
-            piece.transform.SetParent(transform);
-            piece.transform.position = piece.transform.position - (origin.position - lastPoint);
-            lastPoint = endpoint.position;
-
+            MakeTree();
             
-
-
-            // Configure Relative ... Joint
-            RelativeJoint2D reljoint = piece.GetComponent<RelativeJoint2D>();
-            reljoint.connectedBody = lastRigidBody;
-
-            // Next...
-            lastRigidBody = piece.GetComponent<Rigidbody2D>();
         }
+    }
+	
 
+    void MakeTree()
+    {
+
+        bool cont = true;
+        do
+        {
+            Vector3 randomVec = Random.onUnitSphere;
+            Ray ray = new Ray(World.transform.position, randomVec);
+            Vector3 newPos = ray.GetPoint(SphereRadius + 1);
+
+
+
+            _currentTree = Instantiate(Trees[Random.Range(0, 2)], newPos, Quaternion.Euler(0, 0, 0));
+            _currentTree.transform.Rotate(-randomVec);
+
+            _currentTree.transform.SetParent(this.transform);
+
+            Collider[] botsing = Physics.OverlapBox(_currentTree.transform.position, new Vector3(0.5f, 0.5f, 0.5f), _currentTree.transform.rotation);
+            cont = false;
+            for (int b = 0; b < botsing.Length; ++b)
+            {
+                if (botsing[b].gameObject != _currentTree.gameObject) cont = true;
+                Debug.Log("botsts met " + botsing[b].gameObject.name);
+            }
+
+        }
+        while (cont);
 
     }
-
-#endif
-
+	
+	
 }
