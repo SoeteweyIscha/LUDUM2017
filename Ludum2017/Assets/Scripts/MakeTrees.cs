@@ -13,17 +13,15 @@ public class MakeTrees : MonoBehaviour {
     public int numberOfTrees;
     
 
-
-    void Start () {
+    public void Start () {
         SphereRadius = World.GetComponent<SphereCollider>().radius * World.transform.localScale.x;
 
         for(int i = 0; i < numberOfTrees; i++)
         {
-            MakeTree();
-            
+            Debug.Log("Spawn tree");
+            MakeTree();        
         }
     }
-	
 
     void MakeTree()
     {
@@ -37,10 +35,11 @@ public class MakeTrees : MonoBehaviour {
 
 
 
-            _currentTree = Instantiate(Trees[Random.Range(0,3)], newPos, Quaternion.Euler(0,0,0));
+            _currentTree = Instantiate(Trees[Random.Range(0,3)], newPos, Quaternion.Euler(0,0,0)) as GameObject;
             _currentTree.transform.Rotate(-randomVec);
 
             _currentTree.transform.SetParent(this.transform);
+            
 
             Collider[] botsing = Physics.OverlapBox(_currentTree.transform.position, new Vector3(0.5f, 0.5f, 0.5f), _currentTree.transform.rotation);
             cont = false;
