@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : NetworkBehaviour
+public class PaperBagHealth : NetworkBehaviour
 {
     public const int MaxHealth = 3; //Player max health
 

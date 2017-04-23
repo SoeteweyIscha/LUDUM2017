@@ -22,7 +22,7 @@ public class ShellControl_Net : NetworkBehaviour
     {
         _explosion = GetComponentInChildren<ParticleSystem>();        
         _shellRenderer = GetComponent<MeshRenderer>();
-        _explosion.transform.localPosition = Vector3.zero;
+        //_explosion.transform.localPosition = Vector3.zero;
 	}
 	
 	// Shells are update by the server
@@ -57,8 +57,8 @@ public class ShellControl_Net : NetworkBehaviour
         if (!_canKill || other.gameObject.tag != "Player")
             return;
 
-        //PaperBagHealth health = other.gameObject.getComponent<PaperBagHealth>();
-        //if (health != null)
-            //health.TakeDamage(1);
+        PaperBagHealth health = other.gameObject.GetComponent<PaperBagHealth>();
+        if (health != null)
+            health.TakeDamage(1);
     }
 }
