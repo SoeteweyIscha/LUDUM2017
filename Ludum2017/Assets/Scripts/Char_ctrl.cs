@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
 
+
 public class Char_ctrl : NetworkBehaviour {
 
     public float Speed = 6.0F;
     public float JumpSpeed = 8.0F;
     public float Gravity = 20.0F;
-    private Rigidbody controller;
+    public Rigidbody controller;
+    [SerializeField]
+    private Transform _characterCamera;
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 turnLeft = new Vector3(0, -90.0f, 0);
     private Vector3 turnRight = new Vector3(0, 90.0f, 0);
 
+    //public override void OnStartLocalPlayer()
     private void Start()
     {
        controller  = this.GetComponent<Rigidbody>();
         if(isLocalPlayer)
         {
-            Camera.main.transform.position = this.transform.position - this.transform.right * 3 + this.transform.up * 3;
-            Camera.main.transform.LookAt(this.transform.position);
-            Camera.main.transform.parent = this.transform;
+            _characterCamera.transform.position = this.transform.position - this.transform.right * 3 + this.transform.up * 3;
+            _characterCamera.transform.LookAt(this.transform.position);
+            _characterCamera.transform.parent = this.transform;
         }
         
     }
