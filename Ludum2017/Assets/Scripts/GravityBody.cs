@@ -21,6 +21,7 @@ public class GravityBody : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         // Disable rigidbody gravity and rotation as this is simulated in GravityAttractor script
         _rigidbody.useGravity = false;
+        if(this.tag != "Rock")
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
