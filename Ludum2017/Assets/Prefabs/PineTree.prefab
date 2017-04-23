@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 136053631034779524}
   - component: {fileID: 114713379160347078}
   - component: {fileID: 114826817033663004}
+  - component: {fileID: 114921498100989534}
+  - component: {fileID: 114862256382062000}
   m_Layer: 0
   m_Name: PineTree
   m_TagString: Tree
@@ -120,6 +122,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fc492fad2241e4597165fcaa69adf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114862256382062000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313926855814872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18e537ea652744e9a200e729955b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSize: 1
+  minScale: 0.033
+  speed: 2
+  interpolationPeriod: 5
+  bang: 1
+--- !u!114 &114921498100989534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313926855814872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 176
+    i1: 14
+    i2: 246
+    i3: 43
+    i4: 235
+    i5: 159
+    i6: 198
+    i7: 212
+    i8: 249
+    i9: 181
+    i10: 222
+    i11: 213
+    i12: 32
+    i13: 31
+    i14: 223
+    i15: 47
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!136 &136053631034779524
 CapsuleCollider:
   m_ObjectHideFlags: 1

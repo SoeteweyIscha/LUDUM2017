@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 136162900500791664}
   - component: {fileID: 114771897920380590}
   - component: {fileID: 114332311550876770}
+  - component: {fileID: 114810478671762994}
+  - component: {fileID: 114632421891437520}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Tree
@@ -109,6 +111,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fc492fad2241e4597165fcaa69adf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114632421891437520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1765033523742804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e18e537ea652744e9a200e729955b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSize: 1
+  minScale: 0.033
+  speed: 2
+  interpolationPeriod: 5
+  bang: 1
 --- !u!114 &114771897920380590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +138,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19238fd328403643aa0d7e86a5d289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114810478671762994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1765033523742804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 61
+    i1: 116
+    i2: 98
+    i3: 73
+    i4: 5
+    i5: 125
+    i6: 71
+    i7: 84
+    i8: 42
+    i9: 154
+    i10: 26
+    i11: 22
+    i12: 230
+    i13: 55
+    i14: 10
+    i15: 224
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!136 &136162900500791664
 CapsuleCollider:
   m_ObjectHideFlags: 1
