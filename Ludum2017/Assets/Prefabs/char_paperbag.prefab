@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114476050779319986}
   - component: {fileID: 114975070379940122}
   - component: {fileID: 114953762551994098}
+  - component: {fileID: 82974710605697540}
   m_Layer: 0
   m_Name: char_paperbag
   m_TagString: Player
@@ -476,6 +477,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39825648, y: 0.63515913, z: 0.3590204}
   m_Center: {x: -0.0011599064, y: 0.31204206, z: -0.0043144226}
+--- !u!82 &82974710605697540
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142822062540108}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!92 &92499672456084178
 Behaviour:
   m_ObjectHideFlags: 1
@@ -650,6 +731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19238fd328403643aa0d7e86a5d289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: 9a38ecd5eb7f34a40ab092b95db67144, type: 3}
+  jumpSoundVol: 1
 --- !u!114 &114476050779319986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,6 +823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e118d42a725e0142b0699150ede76e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveySound: {fileID: 8300000, guid: dffb3994bd9a27a49b1942b1e21cd072, type: 3}
+  loop: 1
 --- !u!124 &124593095184281342
 Behaviour:
   m_ObjectHideFlags: 1
