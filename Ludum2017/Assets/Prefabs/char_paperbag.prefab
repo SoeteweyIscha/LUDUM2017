@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 20936474081712412}
   - component: {fileID: 124297894055152804}
   - component: {fileID: 92184504559231410}
-  - component: {fileID: 81230452520847106}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -438,13 +437,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39825648, y: 0.63515913, z: 0.3590204}
   m_Center: {x: -0.0011599064, y: 0.31204206, z: -0.0043144226}
---- !u!81 &81230452520847106
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1404048005208926}
-  m_Enabled: 1
 --- !u!92 &92184504559231410
 Behaviour:
   m_ObjectHideFlags: 1
@@ -704,7 +696,7 @@ MonoBehaviour:
   JumpSpeed: 8
   Gravity: 20
   controller: {fileID: 54779812083432750}
-  _characterCamera: {fileID: 0}
+  _characterCamera: {fileID: 4996744863989728}
 --- !u!114 &114893942778694412
 MonoBehaviour:
   m_ObjectHideFlags: 1
