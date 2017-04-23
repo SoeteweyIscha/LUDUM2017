@@ -41,7 +41,7 @@ public class Char_ctrl : NetworkBehaviour {
         
             //Feed moveDirection with input.
             
-        float y = moveDirection.y;
+        //float y = moveDirection.y;
         moveDirection = new Vector3(Input.GetAxis("Vertical"), 0, 0);
         moveDirection = transform.TransformDirection(moveDirection);
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
