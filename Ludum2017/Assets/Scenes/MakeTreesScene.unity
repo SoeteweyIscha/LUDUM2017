@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 17.7, y: 90, z: 0}
 --- !u!1 &486893893
 GameObject:
@@ -237,7 +237,7 @@ MonoBehaviour:
   - {fileID: 1765033523742804, guid: 3d746249057d47542a9a1a16e6370ae0, type: 2}
   - {fileID: 1366193254378932, guid: c7195194ea164fd4ba35b60a2092a65a, type: 2}
   World: {fileID: 195732390}
-  numberOfTrees: 10
+  numberOfTrees: 150
 --- !u!4 &486893895
 Transform:
   m_ObjectHideFlags: 0
