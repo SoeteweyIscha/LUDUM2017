@@ -23,10 +23,8 @@ GameObject:
   - component: {fileID: 23921964726889012}
   - component: {fileID: 135514140848221854}
   - component: {fileID: 114517944657100220}
-  - component: {fileID: 114826429730950374}
-  - component: {fileID: 114026463779935990}
-  - component: {fileID: 114173077431475404}
-  - component: {fileID: 114100405066211948}
+  - component: {fileID: 114784719937981784}
+  - component: {fileID: 114250127219721066}
   m_Layer: 0
   m_Name: World
   m_TagString: Planet
@@ -40,7 +38,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1281336491514550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -85,72 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1281336491514550}
   m_Mesh: {fileID: 4300000, guid: 83410f16969e4a44c8aec5ab4638b928, type: 3}
---- !u!114 &114026463779935990
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281336491514550}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e18e537ea652744e9a200e729955b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startSize: 1
-  minScale: 0.033
-  speed: 2
-  interpolationPeriod: 5
-  bang: 1
---- !u!114 &114100405066211948
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281336491514550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2716b958a62934c9f03571fc94cf4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Trees:
-  - {fileID: 1313926855814872, guid: b00ef62beb9fc6d4f9b5ded5201fdf2f, type: 2}
-  - {fileID: 1765033523742804, guid: 3d746249057d47542a9a1a16e6370ae0, type: 2}
-  - {fileID: 1366193254378932, guid: c7195194ea164fd4ba35b60a2092a65a, type: 2}
-  World: {fileID: 1281336491514550}
-  numberOfTrees: 150
---- !u!114 &114173077431475404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281336491514550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 2
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &114517944657100220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1281336491514550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f7d51a991484742a63bd5fbc713b00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: -9.81
---- !u!114 &114826429730950374
+--- !u!114 &114250127219721066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -182,6 +115,36 @@ MonoBehaviour:
     i15: 64
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114517944657100220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281336491514550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f7d51a991484742a63bd5fbc713b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: -9.81
+--- !u!114 &114784719937981784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281336491514550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99f9c2b281b92a4fa8c835c9cb9f547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minScale: 0.033
+  _expandtionRatio: 4
+  _shrinkRatio: 1
+  _expandtionTime: 2
+  speed: 2
+  _shrinkPeriod: 5
+  bang: 1
 --- !u!135 &135514140848221854
 SphereCollider:
   m_ObjectHideFlags: 1
