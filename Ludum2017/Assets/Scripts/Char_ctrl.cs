@@ -11,20 +11,20 @@ public class Char_ctrl : NetworkBehaviour {
     public float Gravity = 20.0F;
     public Rigidbody controller;
     [SerializeField]
-    private Transform _characterCamera;
+    private Camera _characterCamera;
     private Vector3 moveDirection = Vector3.zero;
-    private Vector3 turnLeft = new Vector3(0, -90.0f, 0);
-    private Vector3 turnRight = new Vector3(0, 90.0f, 0);
+    //private Vector3 turnLeft = new Vector3(0, -90.0f, 0);
+    //private Vector3 turnRight = new Vector3(0, 90.0f, 0);
 
     //public override void OnStartLocalPlayer()
-    private void Start()
+    public override void OnStartLocalPlayer()
     {
-       controller  = this.GetComponent<Rigidbody>();
         if(isLocalPlayer)
         {
             _characterCamera.transform.position = this.transform.position - this.transform.right * 3 + this.transform.up * 3;
             _characterCamera.transform.LookAt(this.transform.position);
             _characterCamera.transform.parent = this.transform;
+            controller = this.GetComponent<Rigidbody>();
         }
         
     }
@@ -34,6 +34,8 @@ public class Char_ctrl : NetworkBehaviour {
 
         if (!isLocalPlayer)
         {
+            _characterCamera.GetComponent<Camera>().enabled = false;
+            Destroy(this);
             return;
         }
        
