@@ -20,7 +20,7 @@ public class PaperBagShooting_Net : NetworkBehaviour {
     private void Reset()
     {
         //find the place where it shoots from
-        _gunBarrel = transform.
+        //_gunBarrel = transform.
     }
 
 	// Update is called once per frame
