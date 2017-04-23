@@ -23,6 +23,11 @@ public class GravityBody : MonoBehaviour
         _rigidbody.useGravity = false;
         if(this.tag != "Rock")
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+
+        if (this.tag == "Tree")
+        {
+            _rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        }
     }
 
 
@@ -42,7 +47,7 @@ public class GravityBody : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
     
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && this.tag == "Player")
         {
 
             _rigidbody.AddForce(-planet.GetTheGravity() * 20);
