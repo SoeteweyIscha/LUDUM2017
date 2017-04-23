@@ -8,7 +8,7 @@ public class WorldShrink : MonoBehaviour
 
     public float startSize;
 
-    public int minScale;
+    public float minScale;
 
     private Vector3 _extra;
 
@@ -27,7 +27,7 @@ public class WorldShrink : MonoBehaviour
 
     void Start()
     {
-        _extra = new Vector3(2, 2, 2);
+        _extra = new Vector3(0.033f, 0.033f, 0.033f);
         _StartScale = new Vector3(startSize, startSize, startSize);
         this.transform.localScale = _StartScale;
         _targetScale = this.transform.localScale - minScale * _extra;

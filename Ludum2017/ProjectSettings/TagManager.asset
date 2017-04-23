@@ -7,6 +7,7 @@ TagManager:
   - Planet
   - Rock
   - Tree
+  - Gun
   layers:
   - Default
   - TransparentFX
