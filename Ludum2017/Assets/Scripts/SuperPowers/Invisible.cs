@@ -14,7 +14,7 @@ public class Invisible : NetworkBehaviour {
         invisible = GetComponentsInChildren<MeshRenderer>();
         trail = GetComponent<TrailRenderer>();
         trail.enabled = false;
-        CmdResetTrail();
+        //CmdResetTrail();
 	}
 	
 	

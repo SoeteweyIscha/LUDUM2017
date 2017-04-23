@@ -308,6 +308,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114041404750920474, guid: c6db9cd6582e9e0418e1ee087b5a4b29,
+        type: 2}
+      propertyPath: m_SpawnPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4607738310137996, guid: c6db9cd6582e9e0418e1ee087b5a4b29, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -351,6 +356,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1142822062540108, guid: aa38afa4a867bf5419580c1bf7388101,
         type: 2}
+    - target: {fileID: 114041404750920474, guid: c6db9cd6582e9e0418e1ee087b5a4b29,
+        type: 2}
+      propertyPath: m_SpawnPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1317781042627120, guid: 9490776a430478f41b0c4b60d859e896,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6db9cd6582e9e0418e1ee087b5a4b29, type: 2}
   m_IsPrefabParent: 0
@@ -369,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2112873313
 MonoBehaviour:
   m_ObjectHideFlags: 0
