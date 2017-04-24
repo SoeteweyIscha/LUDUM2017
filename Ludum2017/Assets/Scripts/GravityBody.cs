@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine.Networking;
+using UnityEngine.Networking;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class GravityBody : MonoBehaviour
 {
-    //audio
-    
-
+    //audio 
+      
     GravityAttractor planet;
 
     Rigidbody _rigidbody;
 
 
 
-    void Awake()
+    private void Awake()
     {
 
         planet = GameObject.FindGameObjectWithTag("Planet").GetComponent<GravityAttractor>();
@@ -27,18 +26,10 @@ public class GravityBody : MonoBehaviour
         
     }
 
-
-
     void FixedUpdate()
     {
-
-        // Allow this body to be influenced by planet's gravity
-
-        planet.Attract(_rigidbody);
-
-        
-
-
+       // Allow this body to be influenced by planet's gravity
+        planet.Attract(_rigidbody);     
     }
 
     

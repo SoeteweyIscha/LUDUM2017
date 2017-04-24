@@ -153,8 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19238fd328403643aa0d7e86a5d289b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSound: {fileID: 0}
-  jumpSoundVol: 0
 --- !u!136 &136162900500791664
 CapsuleCollider:
   m_ObjectHideFlags: 1

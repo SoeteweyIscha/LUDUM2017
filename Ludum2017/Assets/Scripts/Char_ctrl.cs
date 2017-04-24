@@ -98,7 +98,7 @@ public class Char_ctrl : NetworkBehaviour {
         {
             Debug.Log("Jumped");
             //force keeps addinf up -> solve this please
-            controller.AddForce(transform.up*200);
+            controller.AddForce(transform.up*250);
             //play jump sound
             _soundSource2.PlayOneShot(jumpSound, jumpSoundVol);
         }

@@ -1,0 +1,54 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA Quadro M3000M (ID=0x13fa)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.7699
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.124 seconds
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\gille\OneDrive\Documenten\LUDUM2017_2\Ludum2017\ShrinkyPlanet_build\ShrinkyPlanet_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'Sphere') is missing!
+ 
+(Filename:  Line: 1754)
+
+UnloadTime: 2.173630 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2c68 -> priority: 1 
+  Thread -> id: 398 -> priority: 1 
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.507951 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3633.
+Total: 3.482865 ms (FindLiveObjects: 0.180543 ms CreateObjectMapping: 0.081382 ms MarkObjects: 2.218272 ms  DeleteObjects: 1.001876 ms)
+
+Jumped
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Jumped
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
