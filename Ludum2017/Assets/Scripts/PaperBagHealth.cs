@@ -38,11 +38,20 @@ public class PaperBagHealth : NetworkBehaviour
 
         if (isLocalPlayer)
             informationText.text = "Game Over";
-            Invoke("BackToLobby", 3f);
     }
 
     void BackToLobby()
     {
         FindObjectOfType<NetworkLobbyManager>().ServerReturnToLobby();
+    }
+
+
+    public void Update()
+    {
+        if (!isLocalPlayer || _currentHealth > 0)
+        {
+            return;
+        }
+        Invoke("BackToLobby", 3f);
     }
 }
