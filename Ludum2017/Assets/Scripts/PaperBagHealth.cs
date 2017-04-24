@@ -11,6 +11,15 @@ public class PaperBagHealth : NetworkBehaviour
     private int _currentHealth = MaxHealth;
     Text informationText;  // Set the player's health
 
+    private void Start()
+    {
+        //Set current health;
+        _currentHealth = MaxHealth;
+        // If this is the server, tell the deathmatchplayer that this player spawned
+        if (isServer)
+            DeathManager.AddPaperBag (this);
+    }
+
     public void TakeDamage(int amount)
     {
         if (!isServer || _currentHealth < 0)
@@ -24,34 +33,46 @@ public class PaperBagHealth : NetworkBehaviour
         {
             _currentHealth = 0;
             Debug.Log("Dead!");
-
             RpcDied();
+            if (DeathManager.RemovePaperBagAndCheckWinner(this))
+            {
+                PaperBagHealth PaperBag = DeathManager.GetWinner();
+                PaperBag.RpcWon();
+
+                Invoke("BackToLobby", 3f);
+            }
 
             return;
         }
+
     }
 
     [ClientRpc]
     void RpcDied()
     {
-        informationText = GameObject.FindObjectOfType<Text>();
-
         if (isLocalPlayer)
+        {
+            informationText = GameObject.FindObjectOfType<Text>();
             informationText.text = "Game Over";
+
+            //disablefunctions
+            GetComponent<Char_ctrl>().enabled = false;
+            GetComponent<PaperBagShooting_Net>().enabled = false;
+        }
     }
 
+    [ClientRpc]
+    public void RpcWon()
+    {
+        if (isLocalPlayer)
+        {
+            informationText = GameObject.FindObjectOfType<Text>();
+            informationText.text = "YouWon";
+        }
+    }
     void BackToLobby()
     {
         FindObjectOfType<NetworkLobbyManager>().ServerReturnToLobby();
     }
 
-
-    public void Update()
-    {
-        if (!isLocalPlayer || _currentHealth > 0)
-        {
-            return;
-        }
-        Invoke("BackToLobby", 3f);
-    }
 }
