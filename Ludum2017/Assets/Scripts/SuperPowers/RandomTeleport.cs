@@ -39,7 +39,7 @@ public class RandomTeleport : MonoBehaviour {
         }
       }
 
-    void ValidLocation()
+    public void ValidLocation()
     {
 
         bool cont = true;

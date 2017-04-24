@@ -27,8 +27,6 @@ public class PaperBagHealth : NetworkBehaviour
 
             RpcDied();
 
-            Invoke("BackToLobby", 3f);
-
             return;
         }
     }
@@ -40,6 +38,7 @@ public class PaperBagHealth : NetworkBehaviour
 
         if (isLocalPlayer)
             informationText.text = "Game Over";
+            Invoke("BackToLobby", 3f);
     }
 
     void BackToLobby()
