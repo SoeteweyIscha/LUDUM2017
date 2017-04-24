@@ -20,7 +20,7 @@ public class AudioSourceControl : MonoBehaviour
     {
         if (!_audioSource.isPlaying)
         {
-            _audioSource.PlayOneShot(AudioFiles[_SoundFileSelect], 100);
+            _audioSource.PlayOneShot(AudioFiles[_SoundFileSelect], 2);
             _SoundFileSelect += 1;
             if (_SoundFileSelect > 2)
             {
