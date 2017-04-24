@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 114953762551994098}
   - component: {fileID: 82974710605697540}
   - component: {fileID: 114305777920546086}
-  - component: {fileID: 114112915541896092}
   m_Layer: 0
   m_Name: char_paperbag
   m_TagString: Player
@@ -726,21 +725,6 @@ MonoBehaviour:
   walkingSoundVol: 0
   jumpSound: {fileID: 8300000, guid: 9a38ecd5eb7f34a40ab092b95db67144, type: 3}
   jumpSoundVol: 0.7
---- !u!114 &114112915541896092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1142822062540108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c8fbb2f9d7490b4494f063dbab55f6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioFiles:
-  - {fileID: 8300000, guid: 037ce2f60a6711e41a7d9128c9f100a0, type: 3}
-  - {fileID: 8300000, guid: 4bd16d343fc565b41a119188d0171d14, type: 3}
-  - {fileID: 8300000, guid: 1c3ab2b8bf2fb384b9628778a37136bb, type: 3}
 --- !u!114 &114305777920546086
 MonoBehaviour:
   m_ObjectHideFlags: 1
