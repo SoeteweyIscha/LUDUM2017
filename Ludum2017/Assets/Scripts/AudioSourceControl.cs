@@ -22,7 +22,7 @@ public class AudioSourceControl : MonoBehaviour
         {
             _audioSource.PlayOneShot(AudioFiles[_SoundFileSelect], 2);
             _SoundFileSelect += 1;
-            if (_SoundFileSelect > 2)
+            if (_SoundFileSelect > AudioFiles.Length - 1)
             {
                 _SoundFileSelect = 0;
             }
