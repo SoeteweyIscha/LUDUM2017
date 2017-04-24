@@ -221,7 +221,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 73cefb999a0cd5846ae44693797fa27c, type: 2}
+  - {fileID: 2100000, guid: 122345121e3f926479b1cb26a9efbc5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -307,7 +307,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1490525094380038}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: b751f02777454074e8f4fbef661b96e9, type: 3}
 --- !u!33 &33605823559878702
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -454,7 +454,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 6
   JumpSpeed: 8
-  Gravity: 20
+  controller: {fileID: 0}
+  _characterCamera: {fileID: 0}
+  planet: {fileID: 0}
+  walkingSound: {fileID: 0}
+  walkingSoundVol: 0
+  jumpSound: {fileID: 0}
+  jumpSoundVol: 0
 --- !u!114 &114876029978820976
 MonoBehaviour:
   m_ObjectHideFlags: 1
