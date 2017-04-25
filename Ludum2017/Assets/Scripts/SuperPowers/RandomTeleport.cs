@@ -34,10 +34,15 @@ public class RandomTeleport : MonoBehaviour {
         {
             ValidLocation();
 
+            //bugfix teleport boven wereld
+            Debug.Log(SphereRadius);
+
             //play teleport sound
             _soundSource.PlayOneShot(teleportSound, teleportSoundVol);
         }
       }
+
+
 
     public void ValidLocation()
     {
@@ -48,10 +53,14 @@ public class RandomTeleport : MonoBehaviour {
             Vector3 randomVec = Random.onUnitSphere;
             Ray ray = new Ray(World.transform.position, randomVec);
             Vector3 newPos = ray.GetPoint(SphereRadius + 1);
+
+            //bugfix teleport boven wereld
+            Debug.Log(newPos);
+
             this.transform.position = newPos;
             this.transform.Rotate(-randomVec);
             _rb.velocity = Vector3.zero;
-            Debug.Log(randomVec);
+            //Debug.Log(randomVec);
 
             Collider[] botsing =  Physics.OverlapBox(this.transform.position, new Vector3(0.5f, 0.5f, 0.5f), this.transform.rotation);
             cont = false;
