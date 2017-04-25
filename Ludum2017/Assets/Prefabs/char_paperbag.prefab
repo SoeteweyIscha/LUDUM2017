@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7916141f7c3811f41b182f94e113e246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  World: {fileID: 1620192950882496, guid: b9075725fea7f654bb974634bd3ecaf3, type: 2}
+  World: {fileID: 1281336491514550, guid: f67964936468d0147a2f77ab72a1c540, type: 2}
   teleportSound: {fileID: 8300000, guid: 79051f7c9ce11ae45a38aeecd406694d, type: 3}
   teleportSoundVol: 0.35
 --- !u!114 &114953762551994098

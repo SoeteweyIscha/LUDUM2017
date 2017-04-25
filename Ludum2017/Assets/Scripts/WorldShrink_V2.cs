@@ -10,16 +10,16 @@ public class WorldShrink_V2 : NetworkBehaviour
     //private Vector3 _startSize = new Vector3(1,1,1);
 
     [SerializeField]
-    private float _minScale = 0.5f;
+    private float _minScale = 5f;
 
     [SerializeField]
-    private float maxScaled = 0.30f;
+    private float _maxScaled = 30f;
 
     Vector3 transformScale = new Vector3(1, 1, 1);
 
     private Vector3 _extra;
-
-    private Vector3 _StartScale;
+    
+    //private Vector3 _StartScale;
 
     private Vector3 _targetScale;
 
@@ -38,9 +38,12 @@ public class WorldShrink_V2 : NetworkBehaviour
 
     void Start()
     {
-        _extra = new Vector3(0.1f, 0.1f, 0.1f);
-        _StartScale = this.transform.localScale;
-        _targetScale = this.transform.localScale - _minScale * _extra;
+        _extra = new Vector3(0.05f, 0.05f, 0.05f);
+        _minScale /= 100;
+        _maxScaled /= 100;
+        
+        // _StartScale = this.transform.localScale;
+        _targetScale = this.transform.localScale - (_minScale * Vector3.one) ;
 
     }
 
@@ -49,8 +52,10 @@ public class WorldShrink_V2 : NetworkBehaviour
     {
         //Vector3 transformScale;
 
+        Debug.Log(_minScale);
 
-        if (this.transform.localScale.x > maxScaled)
+
+        if (this.transform.localScale.x > _maxScaled)
         {
 
             //Debug.Log("still shrinking");
@@ -63,7 +68,7 @@ public class WorldShrink_V2 : NetworkBehaviour
                 if (time >= _shrinkPeriod + bang)
                 {
                     transformScale = _targetScale;
-                    _targetScale -= (_minScale * _extra);
+                    _targetScale -= (_minScale * Vector3.one);
 
 
 
@@ -75,7 +80,7 @@ public class WorldShrink_V2 : NetworkBehaviour
 
         else
         {
-            transformScale = new Vector3(maxScaled, maxScaled, maxScaled);
+            transformScale = new Vector3(_maxScaled, _maxScaled, _maxScaled);
             //Debug.Log("Done Shrinking");
         }
         

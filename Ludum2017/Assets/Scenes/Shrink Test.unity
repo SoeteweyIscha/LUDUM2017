@@ -15122,7 +15122,7 @@ Prefab:
     - target: {fileID: 114784719937981784, guid: f67964936468d0147a2f77ab72a1c540,
         type: 2}
       propertyPath: _minScale
-      value: 0.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114784719937981784, guid: f67964936468d0147a2f77ab72a1c540,
         type: 2}

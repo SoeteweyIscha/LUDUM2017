@@ -28,6 +28,8 @@ public class RandomTeleport : MonoBehaviour {
 	void Update () {
         SphereRadius = World.GetComponent<SphereCollider>().radius * World.transform.localScale.x;
 
+        Debug.Log(World.transform.localScale.x);
+
         
 
         if (Input.GetKeyDown(KeyCode.T))
@@ -35,7 +37,7 @@ public class RandomTeleport : MonoBehaviour {
             ValidLocation();
 
             //bugfix teleport boven wereld
-            Debug.Log(SphereRadius);
+            //Debug.Log(SphereRadius);
 
             //play teleport sound
             _soundSource.PlayOneShot(teleportSound, teleportSoundVol);
@@ -52,10 +54,10 @@ public class RandomTeleport : MonoBehaviour {
         {
             Vector3 randomVec = Random.onUnitSphere;
             Ray ray = new Ray(World.transform.position, randomVec);
-            Vector3 newPos = ray.GetPoint(SphereRadius + 1);
+            Vector3 newPos = ray.GetPoint(SphereRadius + 1.75f);
 
             //bugfix teleport boven wereld
-            Debug.Log(newPos);
+            //Debug.Log(newPos);
 
             this.transform.position = newPos;
             this.transform.Rotate(-randomVec);
